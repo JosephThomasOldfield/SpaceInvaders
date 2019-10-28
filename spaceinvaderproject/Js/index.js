@@ -76,7 +76,7 @@ function moveMissiles() {
         missiles[missile].top = missiles[missile].top - 5;
     }
 }
-
+//function to generate missiles
 function drawEnemies() {
     document.getElementById('enemies').innerHTML = "";
     for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
@@ -85,10 +85,14 @@ function drawEnemies() {
                 top:${enemies[enemy].top}px;'></div>`;
     }
 }
+//function to move missiles
 function moveEnemies() {
     for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
         enemies[enemy].top = enemies[enemy].top +  1;
     }
+}
+function collisionDetect() {
+    
 }
 
 // This Gameloop function runs the game by repeat executing track functions
