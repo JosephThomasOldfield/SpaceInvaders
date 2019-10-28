@@ -28,10 +28,12 @@
             hero.left = hero.left - 10
             moveHero()
             }
-            else if (e.keyCode === 39)
+            else if (e.keyCode === 39) {
             console.log("right")
-
+            hero.left = hero.left + 10
+            moveHero()
         }
+    }
         // funmction to track player movement
         function moveHero() {
             document.getElementById('hero').style.left = hero.left + "px";  
