@@ -1,6 +1,6 @@
 /* the background for the game */
 #background {
-    background-image: url('/spaceinvaderproject/assets/background.png');
+    background-image: url('/spaceinvaderproject/assets/background1.jpg');
     height: 800px;
     width: 1200px;
     
@@ -23,14 +23,17 @@
     top: 100px;
     left: 550px;
 }
+/* the projectiles to be tracked as a group  */
 #missiles {
     height: 800px;
     width: 1200px;
     position: absolute;
 
 }
+/* the individual missiles */
 .missile{
     background-image: url('/spaceinvaderproject/assets/missile1.png');
     width: 10px;
     height: 16px;
+    position: absolute;
 }

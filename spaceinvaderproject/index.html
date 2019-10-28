@@ -11,7 +11,6 @@
         <div id="background">
             <div id= "hero"></div>
             <div class="enemy"></div>
-            <div class = "missile"></div>
             <div id="missiles"></div>
         </div>
 
@@ -49,14 +48,38 @@
                 left: hero.left +15 , 
                 top: hero.top
             })
-            console.log(missiles)
+            drawMissiles()
         }
     }
         // funmction to track player movement
         function moveHero() {
             document.getElementById('hero').style.left = hero.left + "px";  
         }
-        
+        // Function to track and display missiles
+        function drawMissiles() {
+            document.getElementById('missiles').innerHTML = "";
+            for (let missile = 0; missile <missiles.length; missile = missile +1) {
+                document.getElementById('missiles').innerHTML += 
+                `<div class = 'missile' style='left:${missiles[missile].left}px;
+                top:${missiles[missile].top}px;'></div>`;
+            }
+        }
+        function moveMissiles() { 
+            for (let missile = 0; missile <missiles.length; missile = missile +1) {
+                missiles[missile].top = missiles[missile].top -5;
+        }
+    }
+
+
+
+        // This Gameloop function runs the game by repeat executing track functions
+        function gameloop(){
+            setTimeout(gameloop , 50)
+            moveMissiles();
+            drawMissiles();
+        }
+        gameloop()
+     
     </script> 
 </body>
 </html>
