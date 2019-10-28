@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 /* font-family: 'Press Start 2P', cursive; - this is how you call the font */
 
-
+/* #title {
+    font-family: 'Press Start 2P', cursive;
+    text-align:center;
+    Title need to work out how to put this over the background or something
+} */
 /* the background for the game */
 #background {
     background-image: url('/spaceinvaderproject/assets/background.png');
