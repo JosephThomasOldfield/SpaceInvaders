@@ -14,6 +14,7 @@
     top: 700px;
     left: 550px;
 }
+/* the enemy ships */
 .enemy {
     background-image: url('/spaceinvaderproject/assets/enemy.png');
     height: 50px;
@@ -23,4 +24,3 @@
     left: 550px;
 }
 
-asassafa

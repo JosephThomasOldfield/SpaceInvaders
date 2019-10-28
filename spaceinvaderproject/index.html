@@ -15,6 +15,28 @@
 
 
 
-    <script src="js/index.js"></script> 
+    <script>
+        let hero = {
+            top: 700,
+            left: 550
+
+        }
+        document.onkeydown = function(e) {
+            console.log(e)
+            if (e.keyCode === 37) {
+            console.log("left")
+            hero.left = hero.left - 10
+            moveHero()
+            }
+            else if (e.keyCode === 39)
+            console.log("right")
+
+        }
+        // funmction to track player movement
+        function moveHero() {
+            document.getElementById('hero').style.left = hero.left + "px";  
+        }
+        
+    </script> 
 </body>
 </html>
