@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div id="background">
         <div id="hero"></div>
         <div class="enemy"></div>
@@ -24,7 +23,6 @@
         let hero = {
             top: 700,
             left: 550
-
         }
         document.onkeydown = function (e) {
             console.log(e)
@@ -39,7 +37,7 @@
                 moveHero()
             }
         }
-        // funmction to track player movement
+        // function to track player movement
         function moveHero() {
             document.getElementById('hero').style.left = hero.left + "px";
         }
