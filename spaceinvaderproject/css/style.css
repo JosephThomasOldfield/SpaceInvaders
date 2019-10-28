@@ -29,8 +29,7 @@
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 100px;
-    left: 550px;
+    
 }
 
 /* the projectiles to be tracked as a group  */
@@ -48,6 +47,11 @@
     background-image: url('/spaceinvaderproject/assets/missile1.png');
     width: 10px;
     height: 16px;
+    position: absolute;
+}
+#enemies {
+    height: 800px;
+    width: 1200px;
     position: absolute;
 }
 
