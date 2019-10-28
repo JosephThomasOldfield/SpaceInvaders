@@ -1,3 +1,12 @@
+/* 8 bit font for website */
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+/* font-family: 'Press Start 2P', cursive; - this is how you call the font */
+
+/* #title {
+    font-family: 'Press Start 2P', cursive;
+    text-align:center;
+    Title need to work out how to put this over the background or something
+} */
 /* the background for the game */
 #background {
     background-image: url('/spaceinvaderproject/assets/background.png');
@@ -23,6 +32,7 @@
     top: 100px;
     left: 550px;
 }
+
 #missiles {
     height: 800px;
     width: 1200px;
@@ -34,3 +44,4 @@
     width: 10px;
     height: 16px;
 }
+
