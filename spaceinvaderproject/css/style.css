@@ -1,4 +1,3 @@
-/* 8 bit font for website */
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 /* font-family: 'Press Start 2P', cursive; - this is how you call the font */
 
@@ -13,17 +12,39 @@
     background-image: url('/spaceinvaderproject/assets/background1.jpg');
     height: 800px;
     width: 1200px;
-    
 }
+
 /* This is the text overlay for the background */
-.centered {
+.centered { 
     position: absolute;
     top:5%;
     left:15%;
     font-family: 'Press Start 2P', cursive; 
     color: white;
-    font-size:50px
+    font-size:50px;
+    text-shadow: 5px 10px black;
 }
+
+/* hide title element */
+#hideMe {
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
+}
+
+/* title fades out */
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* title fades out */
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 /* the player character spaceship */
 #hero {
     background-image: url('/spaceinvaderproject/assets/hero.png');
@@ -33,6 +54,7 @@
     top: 700px;
     left: 550px;
 }
+
 /* the enemy ships */
 .enemy {
     background-image: url('/spaceinvaderproject/assets/enemy.png');
@@ -44,15 +66,13 @@
 }
 
 /* the projectiles to be tracked as a group  */
-
-
-
 #missiles {
     height: 800px;
     width: 1200px;
     position: absolute;
 
 }
+
 /* the individual missiles */
 .missile{
     background-image: url('/spaceinvaderproject/assets/missile1.png');
