@@ -70,6 +70,13 @@ function drawMissiles() {
                 top:${missiles[missile].top}px;'></div>`;
     }
 }
+function moveMissiles() {
+    for (let missile = 0; missile < missiles.length; missile = missile + 1) {
+        missiles[missile].top = missiles[missile].top - 5;
+    }
+}
+
+
 // Function for missile movement 
 function moveMissiles() {
     for (let missile = 0; missile < missiles.length; missile = missile + 1) {
@@ -88,20 +95,20 @@ function drawEnemies() {
 //function to move missiles
 function moveEnemies() {
     for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
-        enemies[enemy].top = enemies[enemy].top +  1;
+        enemies[enemy].top = enemies[enemy].top + 1;
     }
 }
 //function to detect unit collision 
 function collisionDetect() {
     for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
         for (let missile = 0; missile < missiles.length; missile = missile + 1) {
-           //Vertical condition
+            //Vertical condition
             if (
                 (missiles[missile].top <= enemies[enemy].top + 50) &&
                 (missiles[missile].top > enemies[enemy].top)
-            ){
+            ) {
                 console.log("hit")
-            }   
+            }
         }
     }
 }
@@ -120,4 +127,4 @@ gameloop()
 //gamne loop keeps game working
 
 
-//game addition
+
