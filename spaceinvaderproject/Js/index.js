@@ -117,4 +117,6 @@ function gameloop() {
 }
 gameloop()
 
+//gamne loop keeps game working
+
 
