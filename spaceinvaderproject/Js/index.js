@@ -105,9 +105,13 @@ function collisionDetect() {
             //Vertical condition
             if (
                 (missiles[missile].top <= enemies[enemy].top + 50) &&
-                (missiles[missile].top > enemies[enemy].top)
-            ) {
+                (missiles[missile].top >= enemies[enemy].top) &&
+                (missiles[missile].left >= enemies[enemy].left) &&
+                (missiles[missile].left <= enemies[enemy].left + 50)  
+                ){
                 console.log("hit")
+                enemies.splice(enemy, 1)
+                missiles.splice(missile, 1)
             }
         }
     }
