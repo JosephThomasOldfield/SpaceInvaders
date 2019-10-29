@@ -105,6 +105,8 @@ function gameloop() {
 }
 gameloop()
 
+//gamne loop keeps game working
+
 
 
 // This Gameloop function runs the game by repeat executing track functions
