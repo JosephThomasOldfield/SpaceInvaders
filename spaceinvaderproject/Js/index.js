@@ -91,8 +91,19 @@ function moveEnemies() {
         enemies[enemy].top = enemies[enemy].top +  1;
     }
 }
+//function to detect unit collision 
 function collisionDetect() {
-    
+    for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
+        for (let missile = 0; missile < missiles.length; missile = missile + 1) {
+           //Vertical condition
+            if (
+                (missiles[missile].top <= enemies[enemy].top + 50) &&
+                (missiles[missile].top > enemies[enemy].top)
+            ){
+                console.log("hit")
+            }   
+        }
+    }
 }
 
 // This Gameloop function runs the game by repeat executing track functions
@@ -102,6 +113,7 @@ function gameloop() {
     drawMissiles();
     moveEnemies();
     drawEnemies();
+    collisionDetect();
 }
 gameloop()
 
