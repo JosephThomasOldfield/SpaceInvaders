@@ -48,7 +48,7 @@ document.onkeydown = function (e) {
         moveHero()
     }
     //Fire Missile by adding to array
-    else if (e.keyCode === 32) {
+    else if (e.keyCode === 90) {
         console.log("fire")
         missiles.push({
             left: hero.left + 15,
