@@ -10,15 +10,18 @@
 /* the background for the game */
 #background {
     background-image: url('../assets/background1.jpg');
-    height: 800px;
+    height: 700px;
     width: 1200px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    
 }
 
 /* This is the text overlay for the background */
 .centered { 
     position: absolute;
-    top:5%;
-    left:15%;
+    top:8%;
+    left:16%;
     font-family: 'Press Start 2P', cursive; 
     color: white;
     font-size:50px;
@@ -51,7 +54,7 @@
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 700px;
+    top: 600px;
     left: 550px;
 }
 
@@ -80,4 +83,17 @@
     height: 16px;
     position: absolute;
 }
+
+#score { 
+    position: absolute;
+    top:7%;
+    left:3%;
+    font-family: 'Press Start 2P', cursive; 
+    color:red;
+    font-size:30px;
+}
+body {
+    background-color: rgb(47, 40, 40);
+}
+
 
