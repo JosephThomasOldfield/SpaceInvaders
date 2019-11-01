@@ -5,7 +5,7 @@ let hero = {
     left: 550,
 }
 
-//Current missile position tracker
+//Array for missiles. 
 let missiles = []
 let enemies = [
 {left: 200, top: 100},
@@ -36,40 +36,33 @@ let enemies = [
 
 ]
 
+
+
 // Function to detect arrow key press and move
-
-
 document.onkeydown = function (e) {
-
-    console.log(e)
     //Move left
+    if (hero.left > 10){
     if (e.keyCode === 37) {
-        console.log("left")
-        hero.left = hero.left - 15
+        hero.left = hero.left - 20
         moveHero()
-    }
-    //Move Right
-    else if (e.keyCode === 39) {
-
-        console.log("right")
-        hero.left = hero.left + 15
+        }
+    } 
+    if(hero.left < 1155) {  
+    if (e.keyCode === 39) {
+        hero.left = hero.left + 20
         moveHero()
+        }
     }
-    //Fire Missile by adding to array
-    else if (e.keyCode === 90) {
-        console.log("fire")
+    
+    if (e.keyCode === 90) {
         missiles.push({
             left: hero.left + 15,
             top: hero.top
         })
     }
 }
-
-//Function to update score 
-function playerScore() {
-    document.getElementById('score').innerHTML = `${Math.round(1700 / (enemies.length +1)) -68}`
-}
-// function to track player movement
+i = 1
+//Function to update hero position
 function moveHero() {
     document.getElementById('hero').style.left = hero.left + "px";
 }
@@ -115,12 +108,58 @@ function collisionDetect() {
                 (missiles[missile].left >= enemies[enemy].left) &&
                 (missiles[missile].left <= enemies[enemy].left + 50)  
                 ){
-                console.log("hit")
                 enemies.splice(enemy, 1)
                 missiles.splice(missile, 1)
             }
         }
     }
+}
+//A function to detecgt when you lose the game by enemy unit movement 
+function lossDetect() {
+    for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
+    if(enemies[enemy].top == 675) {
+        console.log("loss")
+        document.getElementById("lossWin").style.visibility = "visible";
+        }
+    }
+}
+//A function to increase the game speed with time 
+var counter = 60
+function speedIncrease() {
+    if (enemies.length == 0) {
+        i += 1
+        document.getElementById('score').innerHTML = `Round ${i}`
+        missiles = []
+        enemies.push
+        ({"left": 200 , "top": 100},
+        {"left": 300, "top": 100},
+        {"left": 400, "top": 100},
+        {"left": 500, "top": 100},
+        {"left": 600, "top": 100},
+        {"left": 700, "top": 100},
+        {"left": 800, "top": 100},
+        {"left": 900, "top": 100},
+        {"left": 200, "top": 175},
+        {"left": 300, "top": 175},
+        {"left": 400, "top": 175},
+        {"left": 500, "top": 175},
+        {"left": 600, "top": 175},
+        {"left": 700, "top": 175},
+        {"left": 800, "top": 175},
+        {"left": 900, "top": 175},
+        {"left": 200, "top": 250},
+        {"left": 300, "top": 250},
+        {"left": 400, "top": 250},
+        {"left": 500, "top": 250},
+        {"left": 600, "top": 250},
+        {"left": 700, "top": 250},
+        {"left": 800, "top": 250},
+        {"left": 900, "top": 250})
+        counter = counter - 4
+        console.log(counter)
+        return counter
+    }
+    else {return counter}
 }
 
 
@@ -128,15 +167,20 @@ function collisionDetect() {
 
 // This Gameloop function runs the game by repeat executing track functions
 function gameloop() {
-    setTimeout(gameloop, 50);
+    setTimeout(gameloop, speedIncrease());
+    speedIncrease();
     moveMissiles();
     drawMissiles();
     moveEnemies();
     drawEnemies();
     collisionDetect();
-    playerScore();
+    lossDetect()
 }
 gameloop()
+
+//do not make changes to the gameloop
+//change
+
 
 
 

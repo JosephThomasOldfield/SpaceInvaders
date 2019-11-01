@@ -12,6 +12,7 @@
     background-image: url('../assets/background1.jpg');
     height: 700px;
     width: 1200px;
+    border: 2px solid red;
     /* margin-left: auto;
     margin-right: auto; */
     
@@ -21,32 +22,44 @@
 .centered { 
     position: absolute;
     top:8%;
-    left:16%;
+    left:18%;
     font-family: 'Press Start 2P', cursive; 
     color: white;
     font-size:50px;
     text-shadow: 5px 10px black;
+    
+}
+#lossWin { 
+    position: absolute;
+    top:40%;
+    left:27%;
+    font-family: 'Press Start 2P', cursive; 
+    color: red;
+    font-size:50px;
+    text-shadow: 5px 10px black;
+    visibility: hidden;
+    
 }
 
-/* hide title element */
-/* #hideMe {
+
+#hideMe {
     -webkit-animation: cssAnimation 3s forwards; 
     animation: cssAnimation 3s forwards;
-} */
+}
 
 /* title fades out */
-/* @keyframes cssAnimation {
+@keyframes cssAnimation {
     0%   {opacity: 1;}
     90%  {opacity: 1;}
     100% {opacity: 0;}
 }
 
 /* title fades out */
-/* @-webkit-keyframes cssAnimation {
+@-webkit-keyframes cssAnimation {
     0%   {opacity: 1;}
     90%  {opacity: 1;}
     100% {opacity: 0;}
-} */ 
+} 
 
 /* the player character spaceship */
 #hero {
@@ -86,8 +99,8 @@
 
 #score { 
     position: absolute;
-    top:7%;
-    left:3%;
+    top:92%;
+    left:2%;
     font-family: 'Press Start 2P', cursive; 
     color:red;
     font-size:30px;
