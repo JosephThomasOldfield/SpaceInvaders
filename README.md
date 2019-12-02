@@ -1,5 +1,7 @@
 # SPACE INVADERS #
 
+Hosted https://josephthomasoldfield.github.io/SpaceInvaders/
+
 In this project I used my JavaScript skills to crerate my own variation of space invaders using JavaScript, Html, & CSS. 
 
 ## Features ##
