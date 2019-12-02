@@ -1,4 +1,4 @@
-
+var f = 0
 //Current hero position tracker
 let hero = {
     top: 600,
@@ -32,8 +32,6 @@ let enemies = [
 {left: 700, top: 250},
 {left: 800, top: 250},
 {left: 900, top: 250},
-
-
 ]
 
 
@@ -93,8 +91,10 @@ function drawEnemies() {
 }
 //function to move missiles
 function moveEnemies() {
+    if (loss = 1) {
     for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
         enemies[enemy].top = enemies[enemy].top + 1;
+        }
     }
 }
 //function to detect unit collision 
@@ -110,6 +110,8 @@ function collisionDetect() {
                 ){
                 enemies.splice(enemy, 1)
                 missiles.splice(missile, 1)
+                
+                document.getElementById('points').innerHTML = `Score:${(f+=1) * 99}`
             }
         }
     }
@@ -118,7 +120,6 @@ function collisionDetect() {
 function lossDetect() {
     for (let enemy = 0; enemy < enemies.length; enemy = enemy + 1) {
     if(enemies[enemy].top == 675) {
-        console.log("loss")
         document.getElementById("lossWin").style.visibility = "visible";
         }
     }
@@ -155,15 +156,12 @@ function speedIncrease() {
         {"left": 700, "top": 250},
         {"left": 800, "top": 250},
         {"left": 900, "top": 250})
-        counter = counter - 4
+        counter = counter - 3
         console.log(counter)
         return counter
     }
     else {return counter}
 }
-
-
-
 
 // This Gameloop function runs the game by repeat executing track functions
 function gameloop() {
@@ -175,6 +173,7 @@ function gameloop() {
     drawEnemies();
     collisionDetect();
     lossDetect()
+    
 }
 gameloop()
 

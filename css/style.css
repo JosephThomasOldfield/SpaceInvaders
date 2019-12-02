@@ -43,8 +43,8 @@
 
 
 #hideMe {
-    -webkit-animation: cssAnimation 3s forwards; 
-    animation: cssAnimation 3s forwards;
+    -webkit-animation: cssAnimation 10s forwards; 
+    animation: cssAnimation 10s forwards;
 }
 
 /* title fades out */
@@ -108,5 +108,12 @@
 body {
     background-color: rgb(47, 40, 40);
 }
-
+#points { 
+    position: absolute;
+    top:92%;
+    left:860px;
+    font-family: 'Press Start 2P', cursive; 
+    color:red;
+    font-size:30px;
+}
 
